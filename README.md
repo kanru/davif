@@ -13,20 +13,22 @@ The commandline switch is compatiable with the `dwebp` utility for webp.
 First install the binary
 
 ```sh
-cargo install --root /usr davif
+cargo install davif
+sudo install $HOME/.cargo/bin/davif /usr/bin
+```
+
+Install the mime type definition
+
+```sh
+mkdir -p $HOME/.local/share/mime/packages
+cp avif.xml $HOME/.local/share/mime/packages
+update-mime-database $HOME/.local/share/mime
 ```
 
 Then install the thumbnailer config
 
-```txt
-❯ cat avif.thumbnailer 
-[Thumbnailer Entry]
-Exec=/usr/bin/davif %i -scale %s 0 -o %o
-MimeType=image/x-avif;image/avif;
-```
-
 ```sh
-sudo install avif.thumbnailer /usr/share/thumbnailer
+install -m644 avif.thumbnailer $HOME/.local/share/thumbnailers/
 ```
 
 ## License

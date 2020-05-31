@@ -1,3 +1,4 @@
 [Thumbnailer Entry]
-Exec=/usr/bin/davif %i -scale %s 0 -o %o
-MimeType=image/x-avif;image/avif;
+TryExec=davif
+Exec=davif %i -r %s 0 -o %o
+MimeType=image/avif;
