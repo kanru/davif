@@ -1,0 +1,3 @@
+[Thumbnailer Entry]
+Exec=/usr/bin/davif %i -scale %s 0 -o %o
+MimeType=image/x-avif;image/avif;

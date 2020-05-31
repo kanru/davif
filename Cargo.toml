@@ -1,0 +1,16 @@
+[package]
+name = "davif"
+version = "1.0.0"
+authors = ["Kan-Ru Chen <kanru@kanru.info>"]
+description = "decompress an AVIF file to an image file"
+homepage = "https://github.com/kanru/davif"
+repository = "https://github.com/kanru/davif"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+[dependencies]
+libavif-sys = { version = "0.4.2", default-features = false, features = ["codec-dav1d"] }
+png = "0.16.3"
+resize = "0.4.0"
+clap = "2.33.1"
